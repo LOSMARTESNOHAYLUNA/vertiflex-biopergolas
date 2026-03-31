@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cortinas de Cristal VertiFlex | Biopérgolas Fénix – Madrid</title>
+<meta name="description" content="Instala las guillotinas de cristal motorizadas VertiFlex en tu terraza o jardín en Madrid. Presupuesto gratis sin compromiso.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde:        #8EC045;
+    --verde-oscuro: #6a9030;
+    --verde-claro:  #f2f8e8;
+    --verde-btn:    #8EC045;
+    --blanco:       #ffffff;
+    --gris-claro:   #f5f7f5;
+    --gris-medio:   #e8ede9;
+    --gris-texto:   #555f57;
+    --negro:        #1a1f1b;
+    --sombra:       0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--blanco);
+    color: var(--negro);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--blanco);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.9rem 5%;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+  .nav-logo img { height: 38px; }
+  .nav-tel {
+    font-size: 0.9rem; font-weight: 700; color: #5a7a28;
+    text-decoration: none; display: flex; align-items: center; gap: 0.4rem;
+  }
+  .nav-tel:hover { color: var(--verde); }
+  .nav-cta {
+    background: var(--verde); color: #fff;
+    font-family: 'Nunito', sans-serif; font-size: 0.85rem; font-weight: 700;
+    padding: 0.6rem 1.5rem; border: none; border-radius: 4px;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.25s;
+  }
+  .nav-cta:hover { background: var(--verde-oscuro); }
+
+  /* ── HERO ── */
+  .hero {
+    margin-top: 64px;
+    min-height: 90vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .hero-text {
+    padding: 5rem 5% 5rem 7%;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--verde-claro); color: #5a7a28;
+    font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.35rem 0.9rem; border-radius: 20px; margin-bottom: 1.4rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800; line-height: 1.15;
+    color: var(--negro); margin-bottom: 1.2rem;
+  }
+  .hero h1 span { color: var(--verde); }
+  .hero p {
+    font-size: 1.05rem; color: var(--gris-texto);
+    max-width: 500px; margin-bottom: 2rem;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-verde {
+    background: var(--verde); color: #fff;
+    font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 700;
+    padding: 0.85rem 2rem; border-radius: 4px; border: none;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.25s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-verde:hover { background: var(--verde-oscuro); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: #5a7a28;
+    font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 700;
+    padding: 0.85rem 2rem; border-radius: 4px;
+    border: 2px solid var(--verde);
+    text-decoration: none; cursor: pointer;
+    transition: all 0.25s; display: inline-block;
+  }
+  .btn-outline:hover { background: var(--verde-claro); }
+
+  .hero-img {
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-img img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .hero-badge {
+    position: absolute; bottom: 2rem; left: 2rem;
+    background: #fff; border-radius: 8px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--sombra);
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .hero-badge-icon { font-size: 2rem; }
+  .hero-badge-text strong { display: block; font-size: 1rem; font-weight: 800; color: var(--negro); }
+  .hero-badge-text span { font-size: 0.75rem; color: var(--gris-texto); }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--verde);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+  }
+  .stat {
+    padding: 1.6rem 1rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.2);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    display: block; font-size: 1.8rem; font-weight: 800; color: #fff; line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem; color: rgba(255,255,255,0.8);
+    text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.25rem;
+    display: block;
+  }
+
+  /* ── SECTIONS ── */
+  .section { padding: 5rem 5%; }
+  .section-alt { background: var(--gris-claro); }
+  .section-verde { background: var(--verde-claro); }
+
+  .tag {
+    display: inline-block;
+    background: var(--verde-claro); color: #5a7a28;
+    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.3rem 0.8rem; border-radius: 20px; margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+    font-weight: 800; line-height: 1.2;
+    color: var(--negro); margin-bottom: 1rem;
+  }
+  h2 span { color: var(--verde); }
+  .lead { font-size: 1rem; color: var(--gris-texto); max-width: 600px; }
+
+  /* ── QUÉ ES ── */
+  .que-es-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .que-es-img { border-radius: 8px; overflow: hidden; box-shadow: var(--sombra); }
+  .que-es-img img { width: 100%; display: block; }
+  .que-es-text { }
+  .que-es-text p { color: var(--gris-texto); margin-bottom: 1rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+  .chip {
+    background: var(--verde-claro); color: #5a7a28;
+    font-size: 0.78rem; font-weight: 700;
+    padding: 0.35rem 0.9rem; border-radius: 20px;
+  }
+
+  /* ── MODELOS ── */
+  .modelos-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+  .modelos-header .lead { margin: 0 auto; }
+  .modelos-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+  }
+  .modelo-card {
+    background: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .modelo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  }
+  .modelo-img { aspect-ratio: 16/9; overflow: hidden; }
+  .modelo-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+  .modelo-card:hover .modelo-img img { transform: scale(1.05); }
+  .modelo-body { padding: 1.6rem; }
+  .modelo-num {
+    font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--verde); margin-bottom: 0.3rem;
+  }
+  .modelo-body h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .modelo-body p { font-size: 0.88rem; color: var(--gris-texto); line-height: 1.6; }
+  .modelo-tag {
+    display: inline-block; margin-top: 1rem;
+    background: var(--verde-claro); color: #5a7a28;
+    font-size: 0.72rem; font-weight: 800;
+    padding: 0.3rem 0.8rem; border-radius: 20px;
+  }
+
+  /* ── BENEFICIOS ── */
+  .beneficios-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+  .beneficios-header .lead { margin: 0 auto; }
+  .beneficios-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+  }
+  .beneficio {
+    background: var(--blanco);
+    border-radius: 10px; padding: 1.8rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--verde);
+    transition: box-shadow 0.25s;
+  }
+  .beneficio:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+  .beneficio-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+  .beneficio h4 { font-size: 1rem; font-weight: 800; margin-bottom: 0.4rem; color: var(--negro); }
+  .beneficio p { font-size: 0.85rem; color: var(--gris-texto); line-height: 1.6; }
+
+  /* ── SPECS ── */
+  .specs-layout {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: start;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .specs-img { border-radius: 8px; overflow: hidden; box-shadow: var(--sombra); position: sticky; top: 5rem; }
+  .specs-img img { width: 100%; display: block; }
+  .spec-table { width: 100%; border-collapse: collapse; }
+  .spec-table tr { border-bottom: 1px solid var(--gris-medio); }
+  .spec-table td { padding: 0.9rem 0; font-size: 0.9rem; }
+  .spec-table td:first-child { color: var(--gris-texto); font-weight: 400; width: 50%; }
+  .spec-table td:last-child { font-weight: 700; color: var(--negro); }
+  .specs-cta { margin-top: 2rem; }
+
+  /* ── INTEGRACIÓN ── */
+  .integracion-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+  .integracion-cards {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; max-width: 1100px; margin: 0 auto;
+  }
+  .int-card {
+    background: var(--blanco); border-radius: 10px;
+    padding: 1.8rem 1.2rem; text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: box-shadow 0.25s;
+  }
+  .int-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+  .int-icon { font-size: 2.2rem; margin-bottom: 0.7rem; }
+  .int-card h4 { font-size: 0.95rem; font-weight: 800; margin-bottom: 0.4rem; color: var(--negro); }
+  .int-card p { font-size: 0.8rem; color: var(--gris-texto); }
+
+  /* ── TESTIMONIOS ── */
+  .testimonios-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; max-width: 1100px; margin: 2.5rem auto 0;
+  }
+  .testimonio {
+    background: var(--blanco); border-radius: 10px;
+    padding: 1.8rem; box-shadow: var(--sombra);
+  }
+  .stars { color: #f5a623; font-size: 1rem; margin-bottom: 0.8rem; }
+  .testimonio p { font-size: 0.9rem; color: var(--gris-texto); font-style: italic; margin-bottom: 1rem; }
+  .testimonio strong { font-size: 0.85rem; color: var(--negro); font-weight: 800; }
+
+  /* ── FORMULARIO ── */
+  .form-section { background: var(--gris-claro); }
+  .form-layout {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 5rem; align-items: start;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .form-intro p { color: var(--gris-texto); margin-bottom: 1rem; }
+  .contact-item {
+    display: flex; align-items: center; gap: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+  .contact-item .ico { font-size: 1.1rem; }
+  .contact-item a { color: var(--verde-oscuro); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+  .contact-item a:hover { text-decoration: underline; }
+  .contact-item span { color: var(--gris-texto); font-size: 0.9rem; }
+
+  .form-box {
+    background: var(--blanco); border-radius: 10px;
+    padding: 2.5rem; box-shadow: var(--sombra);
+  }
+  .form-box h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--negro); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .field { margin-bottom: 1rem; }
+  label {
+    display: block; font-size: 0.78rem; font-weight: 700;
+    color: var(--negro); margin-bottom: 0.35rem; letter-spacing: 0.03em;
+  }
+  input, select, textarea {
+    width: 100%;
+    border: 1.5px solid var(--gris-medio);
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    font-family: 'Nunito', sans-serif; font-size: 0.9rem; color: var(--negro);
+    background: var(--blanco); outline: none;
+    transition: border-color 0.25s;
+    -webkit-appearance: none;
+  }
+  input:focus, select:focus, textarea:focus { border-color: var(--verde); }
+  textarea { min-height: 100px; resize: vertical; }
+  select option { background: #fff; }
+  .privacy {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    font-size: 0.8rem; color: var(--gris-texto); margin-top: 0.5rem;
+  }
+  .privacy input[type="checkbox"] { width: auto; flex-shrink: 0; margin-top: 0.2rem; cursor: pointer; }
+  .privacy a { color: var(--verde-oscuro); }
+  .submit {
+    width: 100%; margin-top: 1.2rem;
+    background: var(--verde); color: #fff;
+    font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800;
+    padding: 0.95rem; border: none; border-radius: 5px; cursor: pointer;
+    transition: background 0.25s, transform 0.2s;
+  }
+  .submit:hover { background: var(--verde-oscuro); transform: translateY(-2px); }
+  #ok-msg { display: none; color: var(--verde-oscuro); font-size: 0.85rem; font-weight: 700; margin-top: 0.8rem; text-align: center; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--verde-oscuro); color: rgba(255,255,255,0.8);
+    padding: 2rem 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo { display: flex; align-items: center; gap: 0.6rem; }
+  .footer-logo img { height: 30px; filter: brightness(0) invert(1); }
+  .footer-logo span { font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 600; }
+  footer p { font-size: 0.78rem; }
+  footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  footer a:hover { color: #fff; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0.8rem 4%; }
+    .hero { grid-template-columns: 1fr; margin-top: 60px; }
+    .hero-text { padding: 3rem 5%; }
+    .hero-img { height: 55vw; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .que-es-grid, .specs-layout, .form-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .specs-img { position: static; }
+    .modelos-grid, .beneficios-grid, .testimonios-grid { grid-template-columns: 1fr; }
+    .integracion-cards { grid-template-columns: repeat(2, 1fr); }
+    .form-row { grid-template-columns: 1fr; }
+    .section { padding: 3.5rem 5%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://biopergolasfenix.es" class="nav-logo">
+    <img src="https://biopergolasfenix.es/wp-content/uploads/2022/06/biopergolas-fenix-logo-18.png" alt="Biopérgolas Fénix">
+  </a>
+  <a href="tel:692892755" class="nav-tel">📞 692 892 755</a>
+  <a href="#contacto" class="nav-cta">Presupuesto gratis</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-eyebrow">Cortinas de cristal motorizadas</span>
+    <h1>Cierra tu terraza.<br><span>Todo el año.</span><br>Con cristal.</h1>
+    <p>Las guillotinas de cristal VertiFlex son la solución más avanzada del mercado para cerrar terrazas, balcones y jardines. Motorizadas, silenciosas y con mando a distancia.</p>
+    <div class="hero-btns">
+      <a href="#contacto" class="btn-verde">Pide presupuesto gratis</a>
+      <a href="#modelos" class="btn-outline">Ver los modelos</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img
+      src="imagenes-vertiflex/vertiflex-hero.png"
+      alt="Cortina de cristal VertiFlex instalada en terraza"
+    >
+    <div class="hero-badge">
+      <div class="hero-badge-icon">🏅</div>
+      <div class="hero-badge-text">
+        <strong>Líder del mercado</strong>
+        <span>Presente en 72 países</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <span class="stat-num">246 km/h</span>
+    <span class="stat-label">Resistencia al viento</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">12 m²</span>
+    <span class="stat-label">Superficie por módulo</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label" style="font-size:0.9rem; color:#fff; font-weight:800; margin-top:0.5rem; display:block;">Motor Albert Genau®</span>
+    <span class="stat-label">5 años de garantía</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">400 kg</span>
+    <span class="stat-label">Carga máxima por cadena</span>
+  </div>
+</div>
+
+<!-- QUÉ ES -->
+<section class="section" id="que-es">
+  <div class="que-es-grid">
+    <div class="que-es-img">
+      <img
+        src="imagenes-vertiflex/vertiflex-allclean.jpg"
+        alt="VertiFlex instalado en terraza Madrid"
+        loading="lazy"
+      >
+    </div>
+    <div class="que-es-text">
+      <span class="tag">Tecnología VertiFlex</span>
+      <h2>¿Qué son las <span>cortinas de cristal</span> VertiFlex?</h2>
+      <p>VertiFlex es el sistema de guillotina de cristal motorizado más avanzado del mercado. Sus paneles de vidrio templado se mueven verticalmente mediante cadenas de precisión y se controlan con un simple mando a distancia, desde el móvil o mediante domótica.</p>
+      <p>A diferencia de una cortina de cristal convencional, VertiFlex incorpora barandilla de seguridad integrada, aislamiento térmico y acústico máximo, y un mecanismo silencioso que no monta ningún ruido.</p>
+      <p>En Biopérgolas Fénix lo instalamos combinado con nuestras pérgolas bioclimáticas: el resultado es un espacio exterior completamente habitable los 365 días del año.</p>
+      <div class="chips">
+        <span class="chip">✔ Motorizado</span>
+        <span class="chip">✔ Mando a distancia</span>
+        <span class="chip">✔ App iOS y Android</span>
+        <span class="chip">✔ Domótica</span>
+        <span class="chip">✔ Anticorrosión</span>
+        <span class="chip">✔ Sin huellas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELOS -->
+<section class="section section-alt" id="modelos">
+  <div class="modelos-header">
+    <span class="tag">Los 4 modelos VertiFlex</span>
+    <h2>Elige el modelo que <span>mejor se adapta</span> a tu espacio</h2>
+    <p class="lead">Cada versión tiene sus ventajas. Te ayudamos a elegir la que mejor encaja con tu terraza, jardín o balcón.</p>
+  </div>
+  <div class="modelos-grid">
+
+    <div class="modelo-card">
+      <div class="modelo-img">
+        <img src="imagenes-vertiflex/vertiflex-allclean.jpg" alt="VertiFlex All-Clean" loading="lazy">
+      </div>
+      <div class="modelo-body">
+        <div class="modelo-num">Modelo 01</div>
+        <h3>VertiFlex All-Clean</h3>
+        <p>Sistema de guillotina para fachadas y alturas. El panel exterior sube hasta 20 cm y los interiores se abren hacia dentro, permitiéndote limpiar el cristal cómodamente desde el interior. Sin andamios ni riesgos.</p>
+        <span class="modelo-tag">Ideal para balcones y alturas</span>
+      </div>
+    </div>
+
+    <div class="modelo-card">
+      <div class="modelo-img">
+        <img src="imagenes-vertiflex/vertiflex-up.jpg" alt="VertiFlex UP" loading="lazy">
+      </div>
+      <div class="modelo-body">
+        <div class="modelo-num">Modelo 02</div>
+        <h3>VertiFlex UP</h3>
+        <p>Los paneles se recogen completamente en la parte superior. Cuando está abierto, desaparece. Cuando está cerrado, protege. Perfecto si quieres que el paso quede totalmente libre cuando no lo necesitas.</p>
+        <span class="modelo-tag">Paso libre total</span>
+      </div>
+    </div>
+
+    <div class="modelo-card">
+      <div class="modelo-img">
+        <img src="imagenes-vertiflex/vertiflex-twin.jpg" alt="VertiFlex Mono/Twin" loading="lazy">
+      </div>
+      <div class="modelo-body">
+        <div class="modelo-num">Modelo 03</div>
+        <h3>VertiFlex Mono / Twin</h3>
+        <p>El modelo con mayor aislamiento de la gama. Con vidrio cámara 5+12+5, convierte tu terraza en un espacio tan confortable como el salón de tu casa. Sin ruido exterior, sin corrientes, sin frío.</p>
+        <span class="modelo-tag">Máximo aislamiento térmico</span>
+      </div>
+    </div>
+
+    <div class="modelo-card">
+      <div class="modelo-img">
+        <img src="imagenes-vertiflex/vertiflex-allglass.jpg" alt="VertiFlex All-Glass" loading="lazy">
+      </div>
+      <div class="modelo-body">
+        <div class="modelo-num">Modelo 04</div>
+        <h3>VertiFlex All-Glass</h3>
+        <p>Sin marcos visibles. Sin perfiles que interrumpan. Solo cristal de extremo a extremo. El modelo minimalista por excelencia para quienes no quieren ver barreras entre su terraza y las vistas.</p>
+        <span class="modelo-tag">Vista panorámica 100%</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="section" id="ventajas">
+  <div class="beneficios-header">
+    <span class="tag">¿Por qué VertiFlex?</span>
+    <h2>Todo lo que hace <span>diferente</span> a VertiFlex</h2>
+    <p class="lead">Cada detalle del sistema está pensado para que funcione perfectamente, dure mucho tiempo y no te dé ningún problema.</p>
+  </div>
+  <div class="beneficios-grid">
+    <div class="beneficio">
+      <div class="beneficio-icon">🔇</div>
+      <h4>Movimiento silencioso</h4>
+      <p>Las ruedas del kit de desplazamiento evitan que los paneles rocen los perfiles. Abre o cierra sin hacer ruido, a cualquier hora.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">🔒</div>
+      <h4>Seguro contra robos</h4>
+      <p>El panel SafeGuard inferior impide que el sistema se pueda abrir desde fuera. Tu terraza, protegida sin necesidad de rejas.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">🌡️</div>
+      <h4>Aislamiento máximo</h4>
+      <p>Juntas y felpas de EPDM en todos los perfiles. Opcionalmente vidrio cámara 5+12+5. El frío y el calor se quedan donde tú decides.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">📱</div>
+      <h4>Control total desde el móvil</h4>
+      <p>Compatible con app iOS y Android, mando de 1 ó 5 canales y sistemas de domótica. Abre y cierra desde el sofá o desde el trabajo.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">⚙️</div>
+      <h4>Motor Albert Genau® italiano</h4>
+      <p>Alta precisión, fabricado en Italia, con 5 años de garantía. Cada cadena aguanta hasta 400 kg. No tendrás que pensar en él nunca.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">✋</div>
+      <h4>Sin huellas ni manchas</h4>
+      <p>Tratamiento anticorrosión y recubrimiento antihuellas en todos los vidrios y perfiles. Siempre impecable, con la mitad del mantenimiento.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">🛠️</div>
+      <h4>Montaje rápido y limpio</h4>
+      <p>El diseño modular facilita la instalación. En Biopérgolas Fénix lo montamos rápido, sin obras interminables ni sorpresas.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">💡</div>
+      <h4>Emergencia manual</h4>
+      <p>¿Se va la luz? Incluye mecanismo de apertura y cierre manual para que nunca te quedes sin poder moverlo.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">🌬️</div>
+      <h4>Certificado 246 km/h</h4>
+      <p>Certificado europeo de resistencia a vientos extremos. Para que la próxima tormenta te pille dentro, tranquilo y con el café caliente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="section section-alt">
+  <div class="specs-layout">
+    <div class="specs-img">
+      <img src="imagenes-vertiflex/vertiflex-hero.png" alt="Detalles técnicos VertiFlex" loading="lazy">
+    </div>
+    <div>
+      <span class="tag">Ficha técnica</span>
+      <h2>Los datos <span>reales</span>, sin letra pequeña</h2>
+      <p class="lead" style="margin-bottom:1.8rem;">Lo que necesitas saber antes de pedir presupuesto.</p>
+      <table class="spec-table">
+        <tr><td>Sistema</td><td>Guillotina motorizada con cadenas encadenadas</td></tr>
+        <tr><td>Altura máxima</td><td>4.000 mm</td></tr>
+        <tr><td>Anchura máxima</td><td>4.000 mm por módulo</td></tr>
+        <tr><td>Superficie máxima</td><td>12 m² por módulo</td></tr>
+        <tr><td>Número de paneles</td><td>2, 3 ó 4 paneles de vidrio</td></tr>
+        <tr><td>Opciones de vidrio</td><td>8 mm, 10 mm o cámara 5+12+5</td></tr>
+        <tr><td>Carga por cadena</td><td>Hasta 400 kg</td></tr>
+        <tr><td>Resistencia al viento</td><td>Certificado hasta 246 km/h</td></tr>
+        <tr><td>Motor</td><td>Albert Genau® (Italia) · 5 años garantía</td></tr>
+        <tr><td>Control</td><td>Mando · App iOS/Android · Domótica</td></tr>
+        <tr><td>Perfiles</td><td>Aluminio con tratamiento anticorrosión</td></tr>
+        <tr><td>Disponible en</td><td>72 países del mundo</td></tr>
+      </table>
+      <div class="specs-cta">
+        <a href="#contacto" class="btn-verde">Consulta tu espacio concreto →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRACIÓN -->
+<section class="section section-verde">
+  <div class="integracion-header">
+    <span class="tag">Combinación perfecta</span>
+    <h2>VertiFlex se integra con todo<br>lo que ya instalamos</h2>
+    <p class="lead" style="margin:0.5rem auto 0;">Diseña tu espacio exterior a medida combinando pérgola bioclimática, cristal y accesorios.</p>
+  </div>
+  <div class="integracion-cards">
+    <div class="int-card">
+      <div class="int-icon">🏗️</div>
+      <h4>Pérgola bioclimática</h4>
+      <p>La combinación más solicitada. Lamas orientables + VertiFlex = espacio habitable todo el año.</p>
+    </div>
+    <div class="int-card">
+      <div class="int-icon">☀️</div>
+      <h4>Toldos cremallera</h4>
+      <p>Protección solar lateral o superior para completar el cerramiento en los días más calurosos.</p>
+    </div>
+    <div class="int-card">
+      <div class="int-icon">💡</div>
+      <h4>Iluminación LED</h4>
+      <p>Tiras y focos LED integrados en la estructura para disfrutar del espacio también de noche.</p>
+    </div>
+    <div class="int-card">
+      <div class="int-icon">🌡️</div>
+      <h4>Calefacción y frío</h4>
+      <p>Calefactores infrarrojos y ventilación integrados para el confort absoluto en invierno y verano.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section section-alt">
+  <div style="text-align:center; max-width:700px; margin:0 auto 0.5rem;">
+    <span class="tag">Lo que dicen nuestros clientes</span>
+    <h2>Ellos ya disfrutan de su <span>terraza cerrada</span></h2>
+  </div>
+  <div class="testimonios-grid">
+    <div class="testimonio">
+      <div class="stars">★★★★★</div>
+      <p>"Vinieron rápidamente a medir, resolver todas nuestras dudas, tardaron un poquito más en darnos el presupuesto, pero el montaje fue rápido y limpio. Recomiendo 100%."</p>
+      <strong>— Fernando A. L.</strong>
+    </div>
+    <div class="testimonio">
+      <div class="stars">★★★★★</div>
+      <p>"Al principio nos costó encontrar un hueco en su agenda. Pero mereció la pena, sin duda son unos profesionales. La pérgola con el cerramiento de cristal ha quedado muy bonita."</p>
+      <strong>— Ana Vázquez</strong>
+    </div>
+    <div class="testimonio">
+      <div class="stars">★★★★★</div>
+      <p>"Estoy convencido de que fue un acierto contratar con esta empresa. Tuvimos algún retraso por la lluvia, pero finalmente todo a tiempo y en su sitio. Muy atentos hasta el final."</p>
+      <strong>— Kevin Sánchez</strong>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section class="section form-section" id="contacto">
+  <div class="form-layout">
+    <div class="form-intro">
+      <span class="tag">Presupuesto sin compromiso</span>
+      <h2>¿Quieres saber<br><span>cuánto costaría</span><br>en tu terraza?</h2>
+      <p>Cuéntanos tu espacio y te damos un presupuesto orientativo en menos de 24 horas. Si te encaja, venimos a medir gratis.</p>
+      <p style="margin-top:1rem;">Llevamos años instalando cerramientos de cristal en Madrid y alrededores. Sabemos lo que funciona.</p>
+      <div style="margin-top:2rem;">
+        <div class="contact-item"><span class="ico">📞</span><a href="tel:692892755">692 892 755</a></div>
+        <div class="contact-item"><span class="ico">📧</span><a href="mailto:avisos@biopergolasfenix.es">avisos@biopergolasfenix.es</a></div>
+        <div class="contact-item"><span class="ico">📍</span><span>C/ Estambul 22, 28922 Alcorcón, Madrid</span></div>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <h3>Solicita tu presupuesto gratuito</h3>
+      <form onsubmit="enviar(event)">
+        <div class="form-row">
+          <div class="field">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" placeholder="600 000 000" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" placeholder="tu@email.com" required>
+        </div>
+        <div class="field">
+          <label for="modelo">Modelo de interés</label>
+          <select id="modelo">
+            <option value="">— Selecciona un modelo —</option>
+            <option>VertiFlex All-Clean (limpieza desde interior)</option>
+            <option>VertiFlex UP (apilamiento superior)</option>
+            <option>VertiFlex Mono/Twin (máximo aislamiento)</option>
+            <option>VertiFlex All-Glass (sin perfiles)</option>
+            <option>No lo sé todavía, asesoradme</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mensaje">Cuéntanos tu espacio</label>
+          <textarea id="mensaje" placeholder="Medidas aproximadas, tipo de terraza, si ya tienes pérgola bioclimática..."></textarea>
+        </div>
+        <div class="privacy">
+          <input type="checkbox" id="priv" required>
+          <label for="priv" style="text-transform:none; letter-spacing:0; font-size:0.8rem; color:var(--gris-texto); cursor:pointer;">
+            He leído y acepto la <a href="https://biopergolasfenix.es/politicas-de-privacidad/" target="_blank">Política de Privacidad</a>. *
+          </label>
+        </div>
+        <button type="submit" class="submit">Enviar solicitud gratuita →</button>
+        <p id="ok-msg">✅ ¡Recibido! Te contactamos en menos de 24 horas.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="https://biopergolasfenix.es/wp-content/uploads/2022/06/biopergolas-fenix-logo-blanco-1024x547.png" alt="Biopérgolas Fénix">
+    <span>Biopérgolas Fénix · Madrid</span>
+  </div>
+  <p>© 2025 Biopérgolas Fénix &nbsp;·&nbsp; <a href="https://biopergolasfenix.es/politicas-de-privacidad/">Política de privacidad</a> &nbsp;·&nbsp; <a href="https://biopergolasfenix.es">Web principal</a></p>
+</footer>
+
+<script>
+  function enviar(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.submit');
+    btn.textContent = 'Enviando…';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('ok-msg').style.display = 'block';
+      btn.textContent = 'Enviado ✓';
+    }, 1200);
+  }
+</script>
+</body>
+</html>
